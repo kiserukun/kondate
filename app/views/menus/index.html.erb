@@ -1,0 +1,47 @@
+<div class="contents row">
+<h1>今週の献立</h1>
+  <% @menus.each do |menu| %>
+      <p><%= menu.name %>さん</p>
+    <div class="week">
+        <div class="week-menu">
+          <p>日曜の晩ご飯</p>
+          <p><%= menu.sun_menu %></p>
+          <p><%= menu.sun_making %></p>
+        </div> 
+        <div class="week-menu">
+          <p>月曜の晩ご飯</p>
+          <p><%= menu.mon_menu %></p>
+          <p><%= menu.mon_making %></p>
+        </div>
+
+        <div class="week-menu">
+          <p>火曜の晩ご飯</p>
+          <p><%= menu.tue_menu %></p>
+          <p><%= menu.tue_making %></p>
+        </div>
+
+        <div class="week-menu">
+           <p>水曜の晩ご飯</p>
+          <p><%= menu.wed_menu %></p>
+           <p><%= menu.wed_making %></p>
+        </div>
+
+        <div class="week-menu">
+          <p>木曜の晩ご飯</p>
+          <p><%= menu.thu_menu %></p>
+          <p><%= menu.thu_making %></p>
+        </div>
+        <div class="week-menu">
+          <p>金曜の晩ご飯</p>
+          <p><%= menu.fri_menu %></p>
+          <p><%= menu.fri_making %></p>
+        </div>
+
+        <div class="week-menu">
+           <p>土曜の晩ご飯</p>
+          <p><%= menu.sat_menu %></p>
+          <p><%= menu.sat_making %></p>
+        </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,8 @@
+.week{
+  display: flex;
+  justify-content: left;
+}
+.week-menu{
+  background-color: aqua;
+  border: 2px solid black;
+}
