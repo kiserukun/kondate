@@ -1,47 +1,57 @@
-<div class="contents row">
+<div class="contents">
 <h1>今週の献立</h1>
+<div class="kondate">
   <% @menus.each do |menu| %>
-      <p><%= menu.name %>さん</p>
+    
+     <p><%= link_to "#{menu.name}さん", menu_path(menu.id), method: :get %></p>
     <div class="week">
         <div class="week-menu">
-          <p>日曜の晩ご飯</p>
+          <p>日曜日</p>
+          <hr>
           <p><%= menu.sun_menu %></p>
           <p><%= menu.sun_making %></p>
         </div> 
         <div class="week-menu">
-          <p>月曜の晩ご飯</p>
+          <p>月曜日</p>
+          <hr>
           <p><%= menu.mon_menu %></p>
           <p><%= menu.mon_making %></p>
         </div>
 
         <div class="week-menu">
-          <p>火曜の晩ご飯</p>
+          <p>火曜日</p>
+          <hr>
           <p><%= menu.tue_menu %></p>
           <p><%= menu.tue_making %></p>
         </div>
 
         <div class="week-menu">
-           <p>水曜の晩ご飯</p>
+           <p>水曜日</p>
+           <hr>
           <p><%= menu.wed_menu %></p>
            <p><%= menu.wed_making %></p>
         </div>
 
         <div class="week-menu">
-          <p>木曜の晩ご飯</p>
+          <p>木曜日</p>
+          <hr>
           <p><%= menu.thu_menu %></p>
           <p><%= menu.thu_making %></p>
         </div>
         <div class="week-menu">
-          <p>金曜の晩ご飯</p>
+          <p>金曜日</p>
+          <hr>
           <p><%= menu.fri_menu %></p>
           <p><%= menu.fri_making %></p>
         </div>
 
         <div class="week-menu">
-           <p>土曜の晩ご飯</p>
+           <p>土曜日</p>
+           <hr>
           <p><%= menu.sat_menu %></p>
           <p><%= menu.sat_making %></p>
         </div>
     </div>
   <% end %>
+  </div>
 </div>
