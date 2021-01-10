@@ -1,7 +1,7 @@
 class CreateMenus < ActiveRecord::Migration[6.0]
   def change
     create_table :menus do |t|
-      t.string :name
+      t.string :name               , null: false
 
       t.string :sun_menu
       t.text :sun_making
@@ -17,6 +17,7 @@ class CreateMenus < ActiveRecord::Migration[6.0]
       t.text :fri_making
       t.string :sat_menu
       t.text :sat_making
+      t.integer    :sokuseki_id     , null: false
 
       t.timestamps
     end

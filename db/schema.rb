@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_01_08_080731) do
 
   create_table "menus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.string "sun_menu"
     t.text "sun_making"
     t.string "mon_menu"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2021_01_08_080731) do
     t.text "fri_making"
     t.string "sat_menu"
     t.text "sat_making"
+    t.integer "sokuseki_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
