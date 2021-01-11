@@ -29,6 +29,12 @@ ActiveRecord::Schema.define(version: 2021_01_08_080731) do
     t.string "sat_menu"
     t.text "sat_making"
     t.integer "sokuseki_id", null: false
+    t.integer "sokuseki_mon_id", null: false
+    t.integer "sokuseki_tue_id", null: false
+    t.integer "sokuseki_wed_id", null: false
+    t.integer "sokuseki_thu_id", null: false
+    t.integer "sokuseki_fri_id", null: false
+    t.integer "sokuseki_sat_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
