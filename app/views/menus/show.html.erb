@@ -1,12 +1,7 @@
-   <ul class="more_list">
-        <li>
-          <%= link_to '編集', root_path%>
-        </li>
-        <li>
-          <%= link_to '削除', root_path %>
-        </li>
-      </ul>
-    </div>
- 
-    <span class="name"><%= @menu.name %>
+   <div class="more_list">
+          <%= link_to '編集', edit_menu_path(@menu.id),method: :get %>
+      
+          <%= link_to '削除', menu_path(@menu.id),method: :delete %>
+      </div>
+    <span class="name"><%= @menu.name %></span>
     

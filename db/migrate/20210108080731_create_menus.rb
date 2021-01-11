@@ -18,6 +18,12 @@ class CreateMenus < ActiveRecord::Migration[6.0]
       t.string :sat_menu
       t.text :sat_making
       t.integer    :sokuseki_id     , null: false
+      t.integer    :sokuseki_mon_id     , null: false
+      t.integer    :sokuseki_tue_id     , null: false
+      t.integer    :sokuseki_wed_id     , null: false
+      t.integer    :sokuseki_thu_id     , null: false
+      t.integer    :sokuseki_fri_id     , null: false
+      t.integer    :sokuseki_sat_id     , null: false
 
       t.timestamps
     end
