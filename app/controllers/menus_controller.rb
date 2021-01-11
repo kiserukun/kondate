@@ -33,6 +33,6 @@ class MenusController < ApplicationController
 
    private
    def menu_params
-      params.require(:menu).permit(:name,:sun_menu,:sun_making,:mon_menu,:mon_making,:tue_menu,:tue_making,:wed_menu,:wed_making,:thu_menu,:thu_making,:fri_menu,:fri_making,:sat_menu,:sat_making,:sokuseki_id,:sokuseki_mon_id,:sokuseki_tue_id,:sokuseki_wed_id,:sokuseki_thu_id,:sokuseki_fri_id,:sokuseki_sat_id)
+      params.require(:menu).permit(:name,:sun_making,:mon_making,:tue_making,:wed_making,:thu_making,:fri_making,:sat_making,:sokuseki_id,:sokuseki_mon_id,:sokuseki_tue_id,:sokuseki_wed_id,:sokuseki_thu_id,:sokuseki_fri_id,:sokuseki_sat_id).merge(user_id: current_usaer.id)
    end
 end

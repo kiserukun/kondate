@@ -2,31 +2,32 @@
     <%= form_with(model: @menu, local: true) do |f| %>
       <%= f.text_field :name, placeholder: "Nickname" %>
 
-      <p><%= f.text_field :sun_menu, placeholder: "日曜日のメニュー" %>
+    
+       <%#日曜日%>
       <%= f.collection_select(:sokuseki_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
       <%= f.text_area :sun_making, placeholder: "text", rows: "2" %></p>
 
-      <p><%= f.text_field :mon_menu, placeholder: "月曜日のメニュー" %>
+      <%#月曜日%>
       <%= f.collection_select(:sokuseki_mon_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
       <%= f.text_area :mon_making, placeholder: "text", rows: "2" %></p>
 
-      <p><%= f.text_field :tue_menu, placeholder: "火曜日のメニュー" %>
+      <%#火曜日%>
       <%= f.collection_select(:sokuseki_tue_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
       <%= f.text_area :tue_making, placeholder: "text", rows: "2" %></p>
 
-      <p><%= f.text_field :wed_menu, placeholder: "水曜日のメニュー" %>
+      <%#水曜日%>
       <%= f.collection_select(:sokuseki_wed_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
       <%= f.text_area :wed_making, placeholder: "text", rows: "2" %></p>
-
-      <p><%= f.text_field :thu_menu, placeholder: "木曜日のメニュー" %>
+     
+      <%#木曜日%>
       <%= f.collection_select(:sokuseki_thu_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
       <%= f.text_area :thu_making, placeholder: "text", rows: "2" %></p>
 
-      <p><%= f.text_field :fri_menu, placeholder: "金曜日のメニュー" %>
+      <%#金曜日%>
       <%= f.collection_select(:sokuseki_fri_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
       <%= f.text_area :fri_making, placeholder: "text", rows: "2" %></p>
-
-      <p><%= f.text_field :sat_menu, placeholder: "土曜日のメニュー" %>
+      
+      <%#土曜日%>
       <%= f.collection_select(:sokuseki_sat_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
       <%= f.text_area :sat_making, placeholder: "text", rows: "2" %></p>
       <%= f.submit "SEND" %>
