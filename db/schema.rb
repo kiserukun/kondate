@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2021_01_11_075150) do
 
   create_table "menus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
     t.text "sun_making"
     t.text "mon_making"
     t.text "tue_making"

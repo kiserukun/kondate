@@ -1,6 +1,6 @@
 class MenusController < ApplicationController
    def index
-      @menus = Menu.all
+      @menus = Menu.includes(:user)
    end
 
    def new
@@ -15,24 +15,21 @@ class MenusController < ApplicationController
    def show
       @menu = Menu.find(params[:id])
    end
-
-   def destroy
-      menu = Menu.find(menus[:id])
-      menu.destroy
-   end
-
+  
    def edit
       @menu = Menu.find(params[:id])
    end
-
+  
    def update
       menu = Menu.find(params[:id])
       menu.update(menu_params)
       redirect_to action: :index
    end
+  
+
 
    private
    def menu_params
-      params.require(:menu).permit(:name,:sun_making,:mon_making,:tue_making,:wed_making,:thu_making,:fri_making,:sat_making,:sokuseki_id,:sokuseki_mon_id,:sokuseki_tue_id,:sokuseki_wed_id,:sokuseki_thu_id,:sokuseki_fri_id,:sokuseki_sat_id).merge(user_id: current_usaer.id)
+      params.require(:menu).permit(:sun_making,:mon_making,:tue_making,:wed_making,:thu_making,:fri_making,:sat_making,:sokuseki_id,:sokuseki_mon_id,:sokuseki_tue_id,:sokuseki_wed_id,:sokuseki_thu_id,:sokuseki_fri_id,:sokuseki_sat_id).merge(user_id: current_user.id)
    end
 end

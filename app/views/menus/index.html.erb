@@ -2,8 +2,11 @@
 <h1>今週の献立</h1>
 <div class="kondate">
   <% @menus.each do |menu| %>
+    <div class=user_name>
+     <a href="/users/<%= menu.user.id %>"><%="#{menu.user.name}さん"%></a>
+    </div> 
+      
     
-     <p><%= link_to "#{menu.name}さん", menu_path(menu.id), method: :get %></p>
     <div class="week">
         <div class="week-menu">
           <p>日曜日</p>
@@ -28,7 +31,7 @@
         <div class="week-menu">
            <p>水曜日</p>
            <hr>
-          <%= menu.sokuseki_wed.name %>
+           <%= menu.sokuseki_wed.name %>
            <p><%= menu.wed_making %></p>
         </div>
 
