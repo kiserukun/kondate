@@ -7,9 +7,9 @@ class Menu < ApplicationRecord
   belongs_to :sokuseki_thu
   belongs_to :sokuseki_fri
   belongs_to :sokuseki_sat
+  belongs_to :user
 
 
-  validates :name, presence: true
   validates :sokuseki_id, numericality: { other_than: 1 } 
   validates :sokuseki_mon_id, numericality: { other_than: 1 } 
   validates :sokuseki_tue_id, numericality: { other_than: 1 } 

@@ -1,13 +1,14 @@
-   <div class="more_list">
-          <%= link_to '編集', edit_menu_path,method: :get %>
-      
-          <%= link_to '削除', user_path(@menu.id),method: :delete %>
-      </div>
+  
     <span class="name"><%= @name %>さん</span>
     <div class="kondate">
   <% @menus.each do |menu| %>
     
      <p><%= link_to "#{menu.user.name}さん", "/users/#{current_user.id}", method: :get %></p>
+      <div class="more_list">
+          <%= link_to '編集', edit_user_path(menu.id),method: :get %>
+      
+          <%= link_to '削除', user_path(menu.id),method: :delete %>
+      </div>
     
     <div class="week">
         <div class="week-menu">
@@ -59,3 +60,4 @@
     </div>
   <% end %>
   </div>
+    
