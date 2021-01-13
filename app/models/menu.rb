@@ -10,21 +10,12 @@ class Menu < ApplicationRecord
   belongs_to :user
 
   with_options numericality: { other_than: 1 } do
-      validates :sokuseki_id
-      validates :sokuseki_mon_id
-      validates :sokuseki_tue_id
-      validates :sokuseki_wed_id
-      validates :sokuseki_thu_id
-      validates :sokuseki_fri_id
-      validates :sokuseki_sat_id 
-  end   
-  with_options presence: true do
     validates :sokuseki_id
     validates :sokuseki_mon_id
     validates :sokuseki_tue_id
     validates :sokuseki_wed_id
     validates :sokuseki_thu_id
     validates :sokuseki_fri_id
-    validates :sokuseki_sat_id 
-end   
+    validates :sokuseki_sat_id
+  end
 end

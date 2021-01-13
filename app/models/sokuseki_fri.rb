@@ -1,5 +1,5 @@
 class SokusekiFri < ActiveHash::Base
-  self.data =[
+  self.data = [
     { id: 1, name: '金曜日のメニューを選択' },
     { id: 2, name: '飲み会' },
     { id: 3, name: '外食' },
@@ -14,5 +14,4 @@ class SokusekiFri < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :menus
-
 end
