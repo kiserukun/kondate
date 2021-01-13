@@ -18,14 +18,13 @@
              <h1><a href="/">KONDATE</a></h1>
           </div>
           <% if user_signed_in? %>
-          <span><%= current_user.name %>
-            <ul class="user__info">
-              <li>
-                <%= link_to "マイページ", "/users/#{current_user.id}" %>
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-              </li>
-            </ul>
-          </span>
+          
+            <div class="user__info">
+              <a>
+                <%= link_to "マイページ", "/users/#{current_user.id}" %></a>
+              <a>  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              </a>
+            </div>
             <%= link_to "投稿する", new_menu_path, class: "align-right" %>
           </div>
         <% else %>

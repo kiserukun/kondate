@@ -1,6 +1,6 @@
 class SokusekiMon < ActiveHash::Base
   self.data =[
-    { id: 1, name: '--' },
+    { id: 1, name: '月曜日のメニューを選択' },
     { id: 2, name: '飲み会' },
     { id: 3, name: '外食' },
     { id: 4, name: 'デート' },
