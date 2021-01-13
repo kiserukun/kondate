@@ -1,5 +1,5 @@
    <div class="more_list">
-          <%= link_to '編集', edit_menu_path,method: :get %>
+          <%= link_to '編集', edit_menu_path(@menu.id),method: :get %>
       
           <%= link_to '削除', user_path(@menu.id),method: :delete %>
       </div>
