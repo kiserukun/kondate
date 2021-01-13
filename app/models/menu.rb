@@ -9,12 +9,22 @@ class Menu < ApplicationRecord
   belongs_to :sokuseki_sat
   belongs_to :user
 
-
-  validates :sokuseki_id, numericality: { other_than: 1 } 
-  validates :sokuseki_mon_id, numericality: { other_than: 1 } 
-  validates :sokuseki_tue_id, numericality: { other_than: 1 } 
-  validates :sokuseki_wed_id, numericality: { other_than: 1 } 
-  validates :sokuseki_thu_id, numericality: { other_than: 1 } 
-  validates :sokuseki_fri_id, numericality: { other_than: 1 } 
-  validates :sokuseki_sat_id, numericality: { other_than: 1 }  
+  with_options numericality: { other_than: 1 } do
+      validates :sokuseki_id
+      validates :sokuseki_mon_id
+      validates :sokuseki_tue_id
+      validates :sokuseki_wed_id
+      validates :sokuseki_thu_id
+      validates :sokuseki_fri_id
+      validates :sokuseki_sat_id 
+  end   
+  with_options presence: true do
+    validates :sokuseki_id
+    validates :sokuseki_mon_id
+    validates :sokuseki_tue_id
+    validates :sokuseki_wed_id
+    validates :sokuseki_thu_id
+    validates :sokuseki_fri_id
+    validates :sokuseki_sat_id 
+end   
 end

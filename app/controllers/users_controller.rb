@@ -15,10 +15,10 @@ class UsersController < ApplicationController
    @menu = Menu.find(params[:id])
   end
 
- def update
+  def update
    menu = Menu.find(params[:id])
    menu.update(menu_params)
    redirect_to action: :index
- end
+  end
  
 end
