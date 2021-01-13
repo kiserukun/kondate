@@ -1,5 +1,5 @@
 <div class="contents">
-<h1>今週の献立</h1>
+<div class="taito"><h1>今週の献立</h1></div>
 <div class="kondate">
   <% @menus.each do |menu| %>
     <div class=user_name>
@@ -11,48 +11,41 @@
         <div class="week-menu">
           <p>日曜日</p>
           <hr>
-          <%= menu.sokuseki.name %>
-          <p><%= menu.sun_making %></p>
+          <div class="week-resipi"><%= menu.sokuseki.name %></div>
         </div> 
         <div class="week-menu">
           <p>月曜日</p>
           <hr>
-          <%= menu.sokuseki_mon.name %>
-          <p><%= menu.mon_making %></p>
+          <div class="week-resipi"><%= menu.sokuseki_mon.name %></div>
         </div>
 
         <div class="week-menu">
           <p>火曜日</p>
           <hr>
-          <%= menu.sokuseki_tue.name %>
-          <p><%= menu.tue_making %></p>
+          <div class="week-resipi"><%= menu.sokuseki_tue.name %></div>
         </div>
 
         <div class="week-menu">
            <p>水曜日</p>
            <hr>
-           <%= menu.sokuseki_wed.name %>
-           <p><%= menu.wed_making %></p>
+           <div class="week-resipi"><%= menu.sokuseki_wed.name %></div>
         </div>
 
         <div class="week-menu">
           <p>木曜日</p>
           <hr>
-          <%= menu.sokuseki_thu.name %>
-          <p><%= menu.thu_making %></p>
+          <div class="week-resipi"><%= menu.sokuseki_thu.name %></div>
         </div>
         <div class="week-menu">
           <p>金曜日</p>
           <hr>
-          <%= menu.sokuseki_fri.name %>
-          <p><%= menu.fri_making %></p>
+          <div class="week-resipi"><%= menu.sokuseki_fri.name %></div>
         </div>
 
         <div class="week-menu">
            <p>土曜日</p>
            <hr>
-           <%= menu.sokuseki_sat.name %>
-           <p><%= menu.sat_making %></p>
+           <div class="week-resipi"><%= menu.sokuseki_sat.name %></div>
         </div>
     </div>
   <% end %>
