@@ -1,7 +1,9 @@
 <div class="sinki">
 <h3>投稿ページ</h3>
+ <p>下のメニューを選んでください</p>
     <%= form_with(model: @menu, local: true) do |f| %>
-     
+    
+      <%= render 'shared/error_messages', model: f.object %>
        <%#日曜日%>
        <div class="selects">
       <%= f.collection_select(:sokuseki_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
