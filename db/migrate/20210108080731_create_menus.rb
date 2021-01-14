@@ -15,7 +15,7 @@ class CreateMenus < ActiveRecord::Migration[6.0]
       t.integer    :sokuseki_thu_id     , null: false
       t.integer    :sokuseki_fri_id     , null: false
       t.integer    :sokuseki_sat_id     , null: false
-      t.integer    :user_id
+      t.integer    :user_id             , foreign_key: true
       t.timestamps
     end
   end
